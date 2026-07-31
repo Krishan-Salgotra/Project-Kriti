@@ -230,7 +230,7 @@ A place where memories, emotions, and moments can live together forever.
 **Krish**
 
 GitHub:
-https://github.com/YOUR_USERNAME
+https://github.com/Krishan-Salgotra
 
 ---
 
