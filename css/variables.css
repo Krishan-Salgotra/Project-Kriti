@@ -1,0 +1,39 @@
+:root{
+
+    /* Main Colors */
+
+    --bg-dark:#050816;
+
+    --bg-second:#0E1229;
+
+    --purple:#8B5CF6;
+
+    --pink:#FF5DA2;
+
+    --white:#FFFFFF;
+
+    --text:#DADADA;
+
+    --glass:rgba(255,255,255,.08);
+
+    --glass-border:rgba(255,255,255,.15);
+
+    /* Shadows */
+
+    --shadow:0 10px 40px rgba(0,0,0,.35);
+
+    /* Radius */
+
+    --radius:24px;
+
+    /* Transition */
+
+    --transition:.4s ease;
+
+    /* Fonts */
+
+    --main-font:'Poppins',sans-serif;
+
+    --love-font:'Great Vibes',cursive;
+
+}

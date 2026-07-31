@@ -1,0 +1,619 @@
+/* ==========================================
+   PROJECT KRITI
+   MODAL.CSS
+========================================== */
+
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+.memory-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(3,4,12,.82);
+
+    backdrop-filter:blur(18px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+
+        opacity .45s ease,
+
+        visibility .45s ease;
+
+    z-index:9999;
+
+}
+
+/* ==========================================
+   SHOW
+========================================== */
+
+.memory-modal.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================
+   MODAL CONTAINER
+========================================== */
+
+.modal-content{
+
+    position:relative;
+
+    width:90%;
+
+    max-width:900px;
+
+    max-height:88vh;
+
+    overflow-y:auto;
+
+    border-radius:28px;
+
+    background:rgba(20,20,40,.88);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+        0 0 30px rgba(255,255,255,.12),
+
+        0 0 80px rgba(255,93,162,.18);
+
+    transform:translateY(40px) scale(.95);
+
+    transition:
+
+        transform .45s ease;
+
+}
+
+/* ==========================================
+   OPEN ANIMATION
+========================================== */
+
+.memory-modal.show .modal-content{
+
+    transform:translateY(0) scale(1);
+
+}
+
+/* ==========================================
+   MODAL IMAGE
+========================================== */
+
+.modal-image{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:28px 28px 0 0;
+
+}
+
+/* ==========================================
+   MODAL BODY
+========================================== */
+
+.modal-body{
+
+    padding:35px;
+
+}
+
+/* ==========================================
+   MODAL DATE
+========================================== */
+
+.modal-date{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:9px 18px;
+
+    margin-bottom:22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#ffe0f0;
+
+    font-size:.9rem;
+
+}
+
+/* ==========================================
+   MODAL TITLE
+========================================== */
+
+.modal-title{
+
+    color:white;
+
+    font-size:2.3rem;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   MODAL STORY
+========================================== */
+
+.modal-story{
+
+    color:#e5e5e5;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.modal-close{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(12px);
+
+    color:white;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+    z-index:20;
+
+}
+
+.modal-close:hover{
+
+    transform:rotate(90deg) scale(1.1);
+
+    background:#ff5da2;
+
+    box-shadow:
+
+        0 0 20px rgba(255,93,162,.45),
+
+        0 0 40px rgba(255,93,162,.30);
+
+}
+
+/* ==========================================
+   MODAL SCROLLBAR
+========================================== */
+
+.modal-content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.modal-content::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.modal-content::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:20px;
+
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover{
+
+    background:rgba(255,255,255,.35);
+
+}
+
+/* ==========================================
+   MODAL HOVER EFFECT
+========================================== */
+
+.modal-content{
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.modal-content:hover{
+
+    box-shadow:
+
+        0 0 35px rgba(255,255,255,.15),
+
+        0 0 90px rgba(255,93,162,.22);
+
+}
+
+/* ==========================================
+   IMAGE ANIMATION
+========================================== */
+
+.modal-image{
+
+    transition:
+        transform .6s ease;
+
+}
+
+.modal-content:hover .modal-image{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================================
+   GLASS SHINE EFFECT
+========================================== */
+
+.modal-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+    transition:left .9s ease;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.modal-content:hover::before{
+
+    left:150%;
+
+}
+
+/* ==========================================
+   TITLE GLOW
+========================================== */
+
+.modal-title{
+
+    transition:
+        color .35s ease,
+        text-shadow .35s ease;
+
+}
+
+.modal-content:hover .modal-title{
+
+    color:#ffe8f5;
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.25),
+
+        0 0 25px rgba(255,93,162,.30);
+
+}
+
+/* ==========================================
+   DATE BADGE HOVER
+========================================== */
+
+.modal-date{
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        transform .35s ease;
+
+}
+
+.modal-content:hover .modal-date{
+
+    background:rgba(255,255,255,.12);
+
+    border-color:rgba(255,255,255,.25);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   STORY
+========================================== */
+
+.modal-story{
+
+    transition:color .35s ease;
+
+}
+
+.modal-content:hover .modal-story{
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:900px){
+
+    .modal-content{
+
+        width:94%;
+
+        max-height:92vh;
+
+        border-radius:22px;
+
+    }
+
+    .modal-image{
+
+        height:300px;
+
+    }
+
+    .modal-body{
+
+        padding:28px;
+
+    }
+
+    .modal-title{
+
+        font-size:2rem;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .modal-content{
+
+        width:96%;
+
+        border-radius:18px;
+
+    }
+
+    .modal-image{
+
+        height:220px;
+
+    }
+
+    .modal-body{
+
+        padding:22px;
+
+    }
+
+    .modal-title{
+
+        font-size:1.6rem;
+
+    }
+
+    .modal-story{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .modal-close{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:1.2rem;
+
+        top:12px;
+
+        right:12px;
+
+    }
+
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+@keyframes modalFadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   THE END ❤️
+========================================== */
+
+/* ==========================================
+   MEMORY COUNTER
+========================================== */
+
+.modal-counter{
+
+    display:inline-block;
+
+    margin-bottom:22px;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#ffd8ec;
+
+    font-size:.85rem;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+   IMAGE LOADING
+========================================== */
+
+.modal-image{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.04),
+
+            rgba(255,255,255,.08)
+
+        );
+
+}
+
+/* ==========================================
+   MEMORY PROGRESS BAR
+========================================== */
+
+.modal-progress{
+
+    width:100%;
+
+    height:6px;
+
+    margin:18px 0 28px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.modal-progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #ff5da2,
+
+        #8b5cf6
+
+    );
+
+    transition:width .4s ease;
+
+}

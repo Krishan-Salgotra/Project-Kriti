@@ -1,0 +1,884 @@
+/* ==========================================
+   PROJECT KRITI
+   TIMELINE.CSS
+========================================== */
+
+/* ==========================================
+   TIMELINE SECTION
+========================================== */
+
+.timeline-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:120px 0 180px;
+
+    z-index:5;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.timeline-header{
+
+    height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.timeline-title{
+
+    color:white;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:5rem;
+
+    line-height:1.2;
+
+    text-shadow:
+
+        0 0 12px rgba(255,255,255,.30),
+
+        0 0 45px rgba(255,120,220,.25);
+
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+.timeline-scroll{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:14px;
+
+    opacity:.85;
+
+    transition:.4s;
+
+}
+
+.scroll-mouse{
+
+    width:34px;
+
+    height:55px;
+
+    border:2px solid rgba(255,255,255,.7);
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-top:8px;
+
+}
+
+.scroll-mouse span{
+
+    width:4px;
+
+    height:10px;
+
+    border-radius:20px;
+
+    background:white;
+
+    animation:scrollWheel 1.5s infinite;
+
+}
+
+.timeline-scroll p{
+
+    color:white;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================================
+   TIMELINE CONTAINER
+========================================== */
+
+.timeline{
+
+    position:relative;
+
+    width:82%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   TIMELINE LINE
+========================================== */
+
+.timeline-line{
+
+    position:absolute;
+
+    left:50%;
+
+    top:320px;
+
+    bottom:0;
+
+    width:4px;
+
+    transform:translateX(-50%);
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   PROGRESS LINE
+========================================== */
+
+.timeline-progress{
+
+    width:100%;
+
+    height:0%;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        #ffffff,
+
+        #ff5da2,
+
+        #8b5cf6
+
+    );
+
+    border-radius:50px;
+
+    box-shadow:
+
+        0 0 15px rgba(255,255,255,.7),
+
+        0 0 40px rgba(255,93,162,.55),
+
+        0 0 80px rgba(139,92,246,.45);
+
+    transition:height .12s linear;
+
+}
+
+/* ==========================================
+   TIMELINE ITEMS
+========================================== */
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    margin:140px 0;
+
+    opacity:0;
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease,
+
+        filter .8s ease;
+
+}
+
+/* LEFT */
+
+.timeline-item.left{
+
+    left:0;
+
+    padding-right:90px;
+
+    transform:translateX(-100px);
+
+}
+
+/* RIGHT */
+
+.timeline-item.right{
+
+    left:50%;
+
+    padding-left:90px;
+
+    transform:translateX(100px);
+
+}
+
+/* SHOW */
+
+.timeline-item.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* ==========================================
+   TIMELINE CARD
+========================================== */
+
+.timeline-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:24px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+/* Hover */
+
+.timeline-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(255,255,255,.25);
+
+    box-shadow:
+
+        0 0 25px rgba(255,255,255,.18),
+
+        0 0 60px rgba(255,93,162,.30);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.timeline-card img{
+
+    width:100%;
+
+    height:260px;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:
+
+        transform .6s ease,
+
+        filter .6s ease;
+
+}
+
+/* Image Hover */
+
+.timeline-card:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(1.08);
+
+}
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.timeline-card h2{
+
+    margin-top:20px;
+
+    margin-bottom:12px;
+
+    color:white;
+
+    font-size:1.6rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   CARD DESCRIPTION
+========================================== */
+
+.timeline-card p{
+
+    color:#dddddd;
+
+    line-height:1.8;
+
+    font-size:.98rem;
+
+}
+
+/* ==========================================
+   MEMORY DATE
+========================================== */
+
+.memory-date{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 20px;
+
+    margin-bottom:18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    color:#ffe3f2;
+
+    font-size:.85rem;
+
+    letter-spacing:.5px;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.10);
+
+}
+
+/* ==========================================
+   TIMELINE DOT
+========================================== */
+
+.timeline-dot{
+
+    position:absolute;
+
+    top:50%;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:4px solid white;
+
+    transform:translateY(-50%);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease,
+        background .4s ease;
+
+    z-index:100;
+
+}
+
+/* Left Dot */
+
+.timeline-item.left .timeline-dot{
+
+    right:-11px;
+
+}
+
+/* Right Dot */
+
+.timeline-item.right .timeline-dot{
+
+    left:-11px;
+
+}
+
+/* Active Dot */
+
+.timeline-dot.active{
+
+    background:#ff5da2;
+
+    border-color:white;
+
+    transform:translateY(-50%) scale(1.45);
+
+    box-shadow:
+
+        0 0 20px white,
+
+        0 0 45px #ff5da2,
+
+        0 0 90px rgba(255,93,162,.55);
+
+}
+
+/* ==========================================
+   CHAPTER
+========================================== */
+
+.chapter{
+
+    position:relative;
+
+    margin:180px 0 130px;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.chapter-number{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#ffd6ec;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.chapter h2{
+
+    margin-top:24px;
+
+    color:white;
+
+    font-size:3.6rem;
+
+    font-family:"Great Vibes",cursive;
+
+    text-shadow:
+
+        0 0 15px rgba(255,255,255,.25),
+
+        0 0 45px rgba(255,120,220,.25);
+
+}
+
+/* ==========================================
+   REVEAL ANIMATION
+========================================== */
+
+.timeline-item{
+
+    filter:blur(12px);
+
+}
+
+.timeline-item.left{
+
+    transform:translateX(-90px);
+
+}
+
+.timeline-item.right{
+
+    transform:translateX(90px);
+
+}
+
+.timeline-item.show{
+
+    opacity:1;
+
+    filter:blur(0);
+
+    transform:translateX(0);
+
+}
+
+/* ==========================================
+   GLASS SHINE EFFECT
+========================================== */
+
+.timeline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent,
+
+            rgba(255,255,255,.18),
+
+            transparent
+
+        );
+
+    transition:left .9s ease;
+
+    pointer-events:none;
+
+}
+
+.timeline-card:hover::before{
+
+    left:150%;
+
+}
+
+/* ==========================================
+   IMAGE GLOW
+========================================== */
+
+.timeline-card:hover img{
+
+    box-shadow:
+
+        0 0 18px rgba(255,255,255,.18),
+
+        0 0 45px rgba(255,93,162,.30);
+
+}
+
+/* ==========================================
+   CARD SHADOW
+========================================== */
+
+.timeline-card{
+
+    box-shadow:
+
+        0 12px 40px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   TITLE GLOW
+========================================== */
+
+.timeline-card h2{
+
+    transition:.35s;
+
+}
+
+.timeline-card:hover h2{
+
+    color:#ffd7ec;
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.25),
+
+        0 0 20px rgba(255,93,162,.25);
+
+}
+
+/* ==========================================
+   PARAGRAPH
+========================================== */
+
+.timeline-card p{
+
+    transition:.35s;
+
+}
+
+.timeline-card:hover p{
+
+    color:white;
+
+}
+
+/* ==========================================
+   DATE BADGE
+========================================== */
+
+.timeline-card:hover .memory-date{
+
+    background:rgba(255,255,255,.12);
+
+    border-color:rgba(255,255,255,.25);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:900px){
+
+    .timeline{
+
+        width:92%;
+
+    }
+
+    .timeline-line{
+
+        left:28px;
+
+    }
+
+    .timeline-progress{
+
+        width:100%;
+
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        left:0 !important;
+
+        padding-left:80px;
+
+        padding-right:0;
+
+        margin:90px 0;
+
+    }
+
+    .timeline-item.left,
+    .timeline-item.right{
+
+        transform:translateY(60px);
+
+    }
+
+    .timeline-item.show{
+
+        transform:translateY(0);
+
+    }
+
+    .timeline-dot{
+
+        left:28px !important;
+
+        right:auto !important;
+
+        transform:translate(-50%,-50%);
+
+    }
+
+    .timeline-title{
+
+        font-size:3.8rem;
+
+    }
+
+    .chapter h2{
+
+        font-size:2.8rem;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .timeline-title{
+
+        font-size:3rem;
+
+    }
+
+    .chapter h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .timeline-card{
+
+        padding:18px;
+
+    }
+
+    .timeline-card img{
+
+        height:220px;
+
+    }
+
+    .memory-date{
+
+        font-size:.75rem;
+
+        padding:8px 16px;
+
+    }
+
+}
+
+/* ==========================================
+   SMOOTH SCROLL
+========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+    background:#ff5da2;
+
+    color:white;
+
+}
+
+/* ==========================================
+   THE END ❤️
+========================================== */
+
+/* ==========================================
+   TIMELINE END
+========================================== */
+
+.timeline-end{
+
+    text-align:center;
+
+    margin:180px auto 60px;
+
+    max-width:700px;
+
+}
+
+.timeline-end h2{
+
+    color:white;
+
+    font-size:2.5rem;
+
+    font-family:"Great Vibes",cursive;
+
+    margin-bottom:20px;
+
+}
+
+.timeline-end p{
+
+    color:#dddddd;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.next-button{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ff5da2
+    );
+
+    box-shadow:
+        0 10px 35px rgba(255,93,162,.35);
+
+    transition:.35s;
+
+}
+
+.next-button:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 20px 50px rgba(255,93,162,.45);
+
+}

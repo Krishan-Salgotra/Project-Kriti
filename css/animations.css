@@ -1,0 +1,371 @@
+@keyframes moveStars{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-800px);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.loader-box{
+
+    animation:fadeUp 1.2s ease;
+}
+
+@keyframes glow{
+
+    0%{
+
+        text-shadow:0 0 12px rgba(255,93,162,.25);
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 22px rgba(255,93,162,.8),
+        0 0 40px rgba(139,92,246,.5);
+
+    }
+
+    100%{
+
+        text-shadow:0 0 12px rgba(255,93,162,.25);
+
+    }
+
+}
+
+.logo{
+
+    animation:glow 3s infinite;
+}
+
+/* ================= HERO ================= */
+
+@keyframes heroFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes scrollWheel{
+
+    0%{
+
+        transform:translateY(0);
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(15px);
+        opacity:0;
+
+    }
+
+}
+/* ==========================================
+   HERO ANIMATIONS
+========================================== */
+
+@keyframes moonFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes auroraMove{
+
+0%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+100%{
+
+transform:translate(-50%,-52%) scale(1.15);
+
+}
+
+}
+
+@keyframes cloudMove1{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(1700px);
+
+}
+
+}
+
+@keyframes cloudMove2{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-1700px);
+
+}
+
+}
+
+@keyframes shootingStar{
+
+    0%{
+
+        transform:translate(0,0) rotate(315deg);
+
+        opacity:0;
+
+    }
+
+    8%{
+
+        opacity:1;
+
+    }
+
+    90%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translate(-700px,700px) rotate(315deg);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.6);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-300px)
+            translateX(20px)
+            scale(1);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-700px)
+            translateX(-40px)
+            scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes moonGlow{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 40px rgba(255,255,255,.25),
+        0 0 90px rgba(190,210,255,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 60px rgba(255,255,255,.45),
+        0 0 130px rgba(190,210,255,.35);
+
+    }
+
+}
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes buttonFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+@keyframes textFloat{
+
+    0%,100%{
+        transform:translate(-50%,-50%);
+    }
+
+    50%{
+        transform:translate(-50%,-53%);
+    }
+
+}
+
+@keyframes cursorBlink{
+
+    0%,50%{
+
+        opacity:1;
+
+    }
+
+    51%,100%{
+
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   PAGE TRANSITIONS
+========================================== */
+
+body{
+
+    opacity:0;
+
+    transition:
+
+    opacity .9s ease,
+
+    transform .9s ease;
+
+}
+
+body.page-loaded{
+
+    opacity:1;
+
+}
+
+body.page-exit{
+
+    opacity:0;
+
+    transform:scale(1.02);
+
+}

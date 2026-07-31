@@ -1,0 +1,271 @@
+/* ==========================================
+   TRUTH SECTION
+========================================== */
+
+.truth-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.truth-text{
+
+    max-width:900px;
+
+    color:white;
+
+    font-size:2rem;
+
+    line-height:2;
+
+    font-weight:300;
+
+    opacity:0;
+
+    transition:opacity 1s ease;
+
+}
+
+.truth-text.show{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+   EMPHASIS
+========================================== */
+
+.truth-text .highlight{
+
+    color:#ffd8ef;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:3.8rem;
+
+    display:block;
+
+    margin:35px 0;
+
+    text-shadow:
+
+        0 0 15px rgba(255,255,255,.3),
+
+        0 0 40px rgba(255,120,200,.35);
+
+}
+
+/* ==========================================
+   LINE ANIMATION
+========================================== */
+
+.truth-text div{
+
+    margin:16px 0;
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+}
+
+/* ==========================================
+   CONTINUE BUTTON
+========================================== */
+
+.continue-box{
+
+    margin-top:80px;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    pointer-events:none;
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+}
+
+.continue-box.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+}
+
+/* ==========================================
+   CONTINUE BUTTON STYLE
+========================================== */
+
+.continue-btn{
+
+    display:inline-block;
+
+    padding:18px 46px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ff5da2
+    );
+
+    box-shadow:
+
+        0 0 20px rgba(255,93,162,.30),
+
+        0 0 45px rgba(139,92,246,.18);
+
+    transition:.35s ease;
+
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+
+        0 0 35px rgba(255,93,162,.45),
+
+        0 0 70px rgba(139,92,246,.30);
+
+}
+
+/* ==========================================
+   FINAL GLOW
+========================================== */
+
+.truth-text .highlight{
+
+    animation:heartbeatGlow 2.5s ease-in-out infinite;
+
+}
+
+@keyframes heartbeatGlow{
+
+    0%{
+
+        transform:scale(1);
+
+        text-shadow:
+
+            0 0 15px rgba(255,255,255,.25),
+
+            0 0 35px rgba(255,120,200,.25);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+        text-shadow:
+
+            0 0 25px rgba(255,255,255,.45),
+
+            0 0 60px rgba(255,120,200,.45);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        text-shadow:
+
+            0 0 15px rgba(255,255,255,.25),
+
+            0 0 35px rgba(255,120,200,.25);
+
+    }
+
+}
+
+.next-button{
+
+    margin-top:70px;
+
+    text-align:center;
+
+}
+
+.next-button a{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ff5da2
+    );
+
+    box-shadow:
+        0 0 25px rgba(255,105,180,.45);
+
+    transition:.35s ease;
+
+}
+
+.next-button a:hover{
+
+    transform:translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 0 40px rgba(255,105,180,.75);
+
+}

@@ -1,0 +1,470 @@
+/* ==========================================
+   LETTER SECTION
+========================================== */
+
+.letter-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:120px 20px;
+
+    z-index:5;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.letter-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.chapter-number{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    color:#ffd8ef;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.letter-title{
+
+    margin-top:30px;
+
+    color:white;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:5rem;
+
+    text-shadow:
+
+        0 0 15px rgba(255,255,255,.3),
+
+        0 0 45px rgba(255,120,200,.35);
+
+}
+
+.letter-subtitle{
+
+    margin-top:25px;
+
+    color:#dddddd;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================
+   ENVELOPE WRAPPER
+========================================== */
+
+.envelope-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:80px;
+
+    margin-bottom:120px;
+
+}
+
+/* ==========================================
+   ENVELOPE
+========================================== */
+
+.envelope{
+
+    position:relative;
+
+    width:340px;
+
+    height:230px;
+
+    cursor:pointer;
+
+    animation:floatEnvelope 4s ease-in-out infinite;
+
+    transition:transform .4s ease;
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   ENVELOPE BODY
+========================================== */
+
+.envelope-body{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        145deg,
+
+        #ffe8d2,
+
+        #f7d8b5
+
+    );
+
+    border-radius:10px;
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.30),
+
+        0 0 35px rgba(255,220,180,.20);
+
+}
+
+/* ==========================================
+   ENVELOPE TOP FLAP
+========================================== */
+
+.envelope-top{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:120px;
+
+    background:linear-gradient(
+
+        145deg,
+
+        #fbe4cb,
+
+        #efcda7
+
+    );
+
+    clip-path:polygon(
+
+        0 0,
+
+        100% 0,
+
+        50% 100%
+
+    );
+
+    transform-origin:top;
+
+    z-index:5;
+
+    transition:transform .8s ease;
+
+}
+
+/* ==========================================
+   LETTER PAPER
+========================================== */
+
+.letter-paper{
+
+    position:absolute;
+
+    left:50%;
+
+    top:20px;
+
+    width:88%;
+
+    height:180px;
+
+    transform:translateX(-50%);
+
+    background:#fffdf8;
+
+    border-radius:6px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.18);
+
+    transition:
+
+        transform .8s ease;
+
+}
+
+.letter-paper h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:2rem;
+
+    color:#444;
+
+}
+
+.letter-paper p{
+
+    margin-top:12px;
+
+    color:#777;
+
+    font-size:.95rem;
+
+}
+
+/* ==========================================
+   FLOAT ANIMATION
+========================================== */
+
+@keyframes floatEnvelope{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   OPEN ENVELOPE
+========================================== */
+
+.envelope.open .envelope-top{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter-paper{
+
+    transform:
+
+        translateX(-50%)
+
+        translateY(-170px);
+
+}
+
+/* ==========================================
+   LETTER CONTAINER
+========================================== */
+
+.letter-container{
+
+    background:#fffaf2;
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    pointer-events:none;
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease;
+
+}
+
+.letter-container.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+}
+
+/* ==========================================
+   LETTER
+========================================== */
+
+.letter{
+
+    background:#fffdf7;
+
+    color:#444;
+
+    border-radius:20px;
+
+    padding:60px;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.25),
+
+        0 0 45px rgba(255,240,210,.20);
+
+}
+
+/* Greeting */
+
+.greeting{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:3rem;
+
+    color:#444;
+
+    margin-bottom:40px;
+
+}
+
+/* Signature */
+
+.signature{
+
+    margin-top:70px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:2.4rem;
+
+    color:#444;
+
+    text-align:right;
+
+}
+
+/* ==========================================
+   LETTER TEXT
+========================================== */
+
+#letterText{
+
+    font-family:"Alex Brush",cursive;
+
+    font-size:2.1rem;
+
+    line-height:2;
+
+    color:#40352d;
+
+}
+
+/* ==========================================
+   CONTINUE BUTTON
+========================================== */
+
+.continue-box{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.6s;
+
+}
+
+.continue-box.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.continue-btn{
+
+    padding:18px 42px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ff5da2
+    );
+
+    box-shadow:
+        0 0 25px rgba(255,93,162,.35);
+
+    transition:.35s;
+
+}
+
+.continue-btn:hover{
+
+    transform:translateY(-5px);
+
+}

@@ -1,0 +1,43 @@
+@media(max-width:768px){
+
+.loader-box{
+
+    padding:30px;
+
+}
+
+.logo{
+
+    font-size:2.3rem;
+
+}
+
+#loadingText{
+
+    font-size:.92rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.loader-box{
+
+    padding:24px;
+
+}
+
+.logo{
+
+    font-size:2rem;
+
+}
+
+.loading-percent{
+
+    font-size:.85rem;
+
+}
+
+}

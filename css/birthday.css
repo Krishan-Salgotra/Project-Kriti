@@ -1,0 +1,511 @@
+/* ==========================================
+   BIRTHDAY V2
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    background:#050505;
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+.birthday-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:60px 0 120px;
+
+    position:relative;
+
+}
+
+/* ==========================================
+   GOLD BACKGROUND
+========================================== */
+
+.gold{
+
+    background:
+    radial-gradient(circle at center,
+    rgba(212,175,55,.18),
+    transparent 65%);
+}
+
+/* ==========================================
+   DATE
+========================================== */
+
+.date-box{
+
+    text-align:center;
+
+    transition:1.4s;
+
+    z-index:5;
+
+}
+
+.date-box h1{
+
+    font-size:10rem;
+
+    color:#D4AF37;
+
+    font-family:"Cinzel",serif;
+
+    letter-spacing:10px;
+
+    text-shadow:
+
+    0 0 15px rgba(212,175,55,.6),
+    0 0 45px rgba(212,175,55,.25);
+
+}
+
+.date-box h2{
+
+    margin-top:-10px;
+
+    color:white;
+
+    letter-spacing:12px;
+
+    font-size:2rem;
+
+    font-family:"Cinzel",serif;
+
+}
+
+/* Move Up */
+
+.date-box.up{
+
+    transform:
+
+    translateY(-220px)
+
+    scale(.75);
+
+}
+
+/* ==========================================
+   CAKE AREA
+========================================== */
+
+#cakeContainer{
+
+    position:absolute;
+
+    bottom:-500px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    transition:1.4s ease;
+
+}
+
+#cakeContainer.show{
+
+    bottom:170px;
+
+}
+
+#cardContainer.show{
+
+    margin-top:70px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+#cardContainer{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:40px auto;
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:1s;
+
+}
+
+#cardContainer.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.card{
+
+    margin:30px auto;
+
+    width:min(820px,90%);
+
+    padding:40px 55px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:30px;
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(212,175,55,.15);
+}
+
+.card h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:#D4AF37;
+
+    font-family:"Cinzel",serif;
+
+}
+
+.card h3{
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.card p{
+
+    font-size:1.18rem;
+
+    line-height:1.9;
+
+    margin:18px 0;
+
+    color:#eeeeee;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.card .gift-btn{
+
+    margin-top:28px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.gift-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:45px;
+
+    padding:18px 55px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        #FFD54A 0%,
+        #F6C445 45%,
+        #D4AF37 100%
+    );
+
+    color:#111;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.35),
+        0 8px 30px rgba(212,175,55,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+
+}
+
+.gift-btn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 0 45px rgba(255,215,0,.8),
+        0 12px 40px rgba(212,175,55,.3);
+
+    filter:brightness(1.08);
+
+}
+
+.gift-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   LUXURY CAKE
+========================================== */
+
+.luxury-cake{
+
+    position:relative;
+
+    width:230px;
+
+    margin:auto;
+
+}
+
+.cake-shadow{
+
+    width:240px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.45);
+
+    filter:blur(8px);
+
+    margin:auto;
+
+}
+
+.cake-base{
+
+    width:220px;
+
+    height:75px;
+
+    background:#f6d38b;
+
+    border-radius:0 0 25px 25px;
+
+}
+
+.cake-layer{
+
+    width:180px;
+
+    height:60px;
+
+    margin:auto;
+
+    background:white;
+
+}
+
+.cake-top{
+
+    width:140px;
+
+    height:45px;
+
+    margin:auto;
+
+    background:#ffe8b3;
+
+    border-radius:18px 18px 0 0;
+
+}
+
+.candle{
+
+    width:8px;
+
+    height:55px;
+
+    background:white;
+
+    margin:auto;
+
+}
+
+#flame{
+
+    width:18px;
+
+    height:28px;
+
+    background:gold;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    left:50%;
+
+    top:-18px;
+
+    transform:translateX(-50%);
+
+    opacity:0;
+
+    box-shadow:
+
+    0 0 20px gold,
+
+    0 0 55px orange;
+
+}
+
+#flame.show{
+
+    opacity:1;
+
+    animation:flicker .35s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:
+
+translateX(-50%)
+
+scale(.95);
+
+}
+
+to{
+
+transform:
+
+translateX(-50%)
+
+scale(1.08);
+
+}
+
+}
+
+#lightBtn{
+
+margin-top:35px;
+
+padding:16px 34px;
+
+border:none;
+
+border-radius:50px;
+
+background:#D4AF37;
+
+color:black;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#lightBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+.sparkle{
+
+position:fixed;
+
+width:6px;
+
+height:6px;
+
+background:#D4AF37;
+
+border-radius:50%;
+
+box-shadow:0 0 15px gold;
+
+animation:spark 2.5s infinite;
+
+}
+
+@keyframes spark{
+
+0%{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-80px);
+
+}
+
+}
+
+.card.show{
+
+    opacity:1;
+    transform:translateY(0) scale(1);
+
+}
